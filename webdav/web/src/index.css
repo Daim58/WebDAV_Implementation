@@ -1,0 +1,18 @@
+@import '../node_modules/@patternfly/react-core/dist/styles/base.css';
+
+:root {
+  --pf-global--LineHeight--sm: 1.0;
+  --pf-global--LineHeight--md: 1.2;
+  --pf-global--FontSize--4xl: 1.75rem;
+  --pf-global--FontSize--3xl: 1.5rem;
+  --pf-global--FontSize--2xl: 1.25rem;
+  --pf-global--FontSize--xl: 1.125rem;
+  --pf-global--FontSize--lg: 1rem;
+  --pf-global--FontSize--md: 0.875rem;
+  --pf-global--FontSize--sm: 0.75rem;
+  --pf-global--FontSize--xs: 0.625rem;
+}
+
+html, body, #root {
+    height: 100%;
+}
