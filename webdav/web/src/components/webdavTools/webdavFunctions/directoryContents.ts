@@ -1,4 +1,3 @@
-const pathPosix = require("path-posix");
 import { joinURL, normaliseHREF } from "../newDependency/url";
 import { encodePath, normalisePath } from "../newDependency/path";
 import { parseXML, prepareFileFromProps } from "../newDependency/dav";
@@ -11,6 +10,7 @@ import {
     ResponseDataDetailed,
     WebDAVClientContext
 } from "../types";
+const pathPosix = require("path-posix");
 
 export async function getDirectoryContents(
     context: WebDAVClientContext,

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"strings"
+
 	build "webdav/web"
 
 	"golang.org/x/net/webdav"
@@ -18,7 +19,13 @@ func main() {
 	)
 
 	flag.Parse()
-
+	// portnum := strconv.Itoa(*port)
+	// f, err := os.Create("./web/src/assets/port.txt")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// f.WriteString(portnum)
+	// defer f.Close()
 	filesystem, err := build.GetFS()
 
 	if nil != err {

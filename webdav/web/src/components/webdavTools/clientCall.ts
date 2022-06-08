@@ -24,7 +24,7 @@ import {
 } from "./types";
 
 const DEFAULT_CONTACT_HREF =
-    "https://github.com/perry-mitchell/webdav-client/blob/master/LOCK_CONTACT.md";
+    "";
 
 export function createClient(remoteURL: string, options: WebDAVClientOptions): WebDAVClient {
     const {

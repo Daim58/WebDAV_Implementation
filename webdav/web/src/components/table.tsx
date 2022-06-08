@@ -9,8 +9,9 @@ import { BufferLike, FileStat, ResponseDataDetailed } from './webdavTools/types'
 var repor : FileStat[]| ResponseDataDetailed<FileStat[]> = [];
 
 export const ComposableTableSortable: React.FunctionComponent = () => {
+
 const client = createClient(
-  "http://localhost:8888/webdav",
+  `http://localhost:8888/webdav`,
    {
      username: '',
      password: '',
@@ -45,12 +46,12 @@ fetchList();
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    alert('Downloaded File: ' + file4download);
+    setTimeout(function(){alert('Downloaded File: ' + file4download)}, 1000);
   }
 
   async function deleteFile(file4delete: string){
     await client.deleteFile(file4delete)
-    alert('Deleted file: ' + file4delete.substring(1));
+    setTimeout(function(){alert('Deleted file: ' + file4delete.substring(1));}, 1000);
     fetchList()
   }
 

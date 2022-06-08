@@ -11,7 +11,7 @@ export function createDigestContext(username: string, password: string): DigestC
 
 export function generateDigestAuthHeader(options: RequestOptionsWithState, digest: DigestContext): string {
     const url = options.url.replace("//", "");
-    const uri = url.indexOf("/") == -1 ? "/" : url.slice(url.indexOf("/"));
+    const uri = url.indexOf("/") === -1 ? "/" : url.slice(url.indexOf("/"));
     const method = options.method ? options.method.toUpperCase() : "GET";
     const qop = /(^|,)\s*auth\s*($|,)/.test(digest.qop!) ? "auth" : false;
     const ncString = `00000000${digest.nc}`.slice(-8);
